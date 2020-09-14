@@ -1,0 +1,6 @@
+---
+name: PlsMeme
+version: 0.0.1
+main: ExileWeb\PlsMeme\Main
+api: 3.15.0
+...
