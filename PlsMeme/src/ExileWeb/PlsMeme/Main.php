@@ -14,7 +14,7 @@ use pocketmine\event\player\PlayerChatEvent;
 //Import FormAPI
 use jojoe77777\FormAPI\SimpleForm;
 
-class Main extends PluginBase{
+class Main extends PluginBase implements Listener{
 public $cfg;
     public $memes;
 
