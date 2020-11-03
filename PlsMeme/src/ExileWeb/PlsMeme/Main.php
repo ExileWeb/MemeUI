@@ -51,6 +51,9 @@ public $cfg;
         $name = $player->getName();
         $form = new SimpleForm(function (Player $player, $data) {
             $result = $data;
+            if($result === null){
+                return;
+            }
             switch ($result) {
                 default:
                     $this->sendInfo($player, $result);
@@ -75,7 +78,7 @@ public $cfg;
         $responseData = json_decode($memes, TRUE);
         $memes = array_splice($responseData['data']['memes'], $limit);
         $this->memes = $memes;
-        shuffle($memes);
+        //shuffle($memes);
         foreach ($memes as $meme) {
             //$meme["url"] = preg_replace("/^https:/i", "http:", $meme["url"]);
             //$meme['url'] = str_replace('\\', '/', $meme['url']);
